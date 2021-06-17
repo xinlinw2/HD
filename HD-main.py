@@ -18,15 +18,9 @@ nLevels =4
 n =1
 #"""
 Per_=0.8
-Path_sorce_="C:\\Users\\Xinlin\\Desktop\\HD_test\\data_sources\\32_days_normalized.csv"
-#Path_sorce_="uci_normalized.csv"
-#Path_sorce_="ecg_normalized_3.csv"
-#Path_sorce_="ECG_database.csv"
-#Path_sorce_="ECG_database_imbalacced_rate_59.csv"  #ECG_database_imbalacced_rate_more_1_.csv
-#Path_sorce_="ECG_database_imbalacced_rate_more_59_.csv"
-# ('this is uci data')
-#print ('this is Tanzania data')
-#print ('ECG data loading')
+Path_sorce_="data_sources.csv"
+#Path_sorce_="uci.csv"
+
 seg=5 # for uci test or Tan test, the value is 5; for ecg, the value=96
 if (os.path.exists(Path_sorce_)):
      ratings = pd.read_csv(Path_sorce_,header=None)
