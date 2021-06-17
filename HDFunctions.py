@@ -189,7 +189,7 @@ def genLevelHVs(totalLevel, D):
             base[index] = base[index] * -1
         levelHVs[name] = copy.deepcopy(base)
         #ax00.plot(base)
-        levelHV_stash('1013', levelHVs[name])#establish a stash bank for initial data saving
+        levelHV_stash('*****', levelHVs[name])#establish a stash bank for initial data saving
     # print ("Level_HV dict generated")
     fig, (ax1, ax2,ax3,ax4) = plt.subplots(4, 1)
     ax1.plot(levelHVs[0],  linewidth=1)
@@ -204,7 +204,7 @@ def genLevelHVs(totalLevel, D):
     return levelHVs
 
 def levelHV_stash(password,vectors):
-    if(password=='1013'):
+    if(password=='*****'):
         levelHV_bank.append(vectors)
 
 # Encodes a single datapoint into a hypervector
@@ -226,11 +226,11 @@ def EncodeToHV(inputBuffer, D, levelHVs, levelList):
         levelHV = levelHVs[key]
         #print (levelHV)#len=10.000
         sumHV = sumHV + np.roll(levelHV, keyVal)
-    training_key_stash('1013',order)
+    training_key_stash('*****',order)
     return sumHV
 
 def training_key_stash(password,order):
-    if(password=='1013'):
+    if(password=='*****'):
         training_key_bank.append(order)
 # This function attempts to guess the class of the input vector based on the model given
 # Inputs:
